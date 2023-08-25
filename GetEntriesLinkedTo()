@@ -1,0 +1,5 @@
+function GetEntriesLinkedTo(e, lib) {
+
+  return libByName(lib).linksTo(e);
+
+}
