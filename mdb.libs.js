@@ -9,5 +9,5 @@ function CountEntriesLinkedTo(e,lib) {
 }
 
 function HasEntriesLinkedTo(e, lib) {
-  return CountEntriesLinked(e,lib) > 0;
+  return CountEntriesLinkedTo(e,lib) > 0;
 }
