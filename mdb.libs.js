@@ -17,3 +17,26 @@ function SetStatusByLinked(e, lib, f, status1, status2) {
   else
     e.set(f, status2);
 }
+
+function OpenEntryInLib(q, d) {
+
+  var lib = libByName(d);
+
+  if (lib == null) {
+    message("❌️ OpenEntryInLib ERROR 1: Cannot find library named " + d);
+    return;
+  }
+
+  var ent = lib.find(q);
+
+  if (ent.length == 0) {
+    message("❌️ OpenEntryInLib ERROR 2: Cannot find entry " + q + " in library named " + d);
+    return;
+
+  }
+
+  ent[0].show();
+
+  
+
+} // OpenEntryInLib
