@@ -40,3 +40,23 @@ function OpenEntryInLib(q, d) {
   
 
 } // OpenEntryInLib
+
+function CalcSumOfLinked(e, destinationField, linkedDBName, linkedField) {
+
+
+var links = libByName(linkedDBName).linksTo(e);
+
+	var totalScore = 0;
+
+//	for (var i = 0; i < links.length; i++) {
+	for (var i in links)
+   totalScore += links[i].field(linkedField);
+	
+
+// var avg = totalScore / links.length;
+	  
+	
+
+e.set(destinationField, totalScore);
+	
+}
