@@ -39,6 +39,13 @@ function OpenLib(n) {
 
 } // OpenLib()
 
+function OpenLibFromField(e, f) {
+
+  OpenLib(e.field(f)[0].name);
+
+
+} // OpenLibFromField
+
 
 
 function OpenEntryInLib(q, d) {
