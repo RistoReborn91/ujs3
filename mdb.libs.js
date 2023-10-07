@@ -18,6 +18,29 @@ function SetStatusByLinked(e, lib, f, status1, status2) {
     e.set(f, status2);
 }
 
+
+
+
+function OpenLib(n) {
+
+	var lib2 = libByName(n);
+
+	if (lib2 == null) 
+
+		message("⚠️  Cannot find " + n);
+	
+	else {
+	
+		message("✅  Opening " + n);
+	
+	lib2.show();
+	
+	}
+
+} // OpenLib()
+
+
+
 function OpenEntryInLib(q, d) {
 
   var lib = libByName(d);
