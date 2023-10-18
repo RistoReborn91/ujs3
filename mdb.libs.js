@@ -92,17 +92,26 @@ e.set(destinationField, totalScore);
 }
 
 
-function LoadThumb(e, fields) {
+function LoadThumb(e, fields) { 
+  
+ var thumb;
+ var found = false; 
+  
+ for (var i in fields) {
 
-var thumb;
+  var f = e.field(fields[i]);
+  // message(f);
+ 
+   if (f.length > 0) {
+     thumb = fields[i];
+     found = true;
+  }   
+ } 
+  
+  
+  if (found)
+ e.set("Thumbnail", e.field(thumb)); 
 
-for (var i in fields) {
-  if (e.field(fields[i]) != "")
-    thumb = fields[i];  
-}
 
-
-
-e.set("Thumbnail", e.field(thumb));
-
-}
+  
+ }
