@@ -90,3 +90,19 @@ var links = libByName(linkedDBName).linksTo(e);
 e.set(destinationField, totalScore);
 	
 }
+
+
+function LoadThumb(e, fields) {
+
+var thumb;
+
+for (var i in fields) {
+  if (e.field(fields[i]) != "")
+    thumb = fields[i];  
+}
+
+
+
+e.set("Thumbnail", e.field(thumb));
+
+}
