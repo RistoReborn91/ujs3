@@ -107,6 +107,7 @@ function LoadThumb(e, fields) {
      thumb = fields[i];
      found = true;
      phase = i;
+     phase++;
   }   
  } 
   
@@ -114,6 +115,6 @@ function LoadThumb(e, fields) {
   if (found) 
  e.set("Thumbnail", e.field(thumb)); 
 
- e.set("Sketch Phase", ++phase);
+ e.set("Sketch Phase", phase);
   
  }
