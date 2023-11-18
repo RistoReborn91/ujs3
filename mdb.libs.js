@@ -119,11 +119,12 @@ function LoadThumb(e, fields) {
   
  }
 
-function LoadIcon(e, srcDB) {
+function LoadIcon(e, srcLibFieldName) {
 
- if (srcDB.length > 0)
-		e.set("Icon", e.field(srcDB)[0].field("Icon"));
-	else
-		message("LoadIcon ERROR: " + srcDB + " field does not have any entries!");
+var srcLibFields = e.field(srcLibFieldName); 
 
+if (srcLibFields.length > 0)
+                e.set("Icon", srcLibFields[0].field("Icon"));
+        else
+                message("💢 LoadIcon ERROR 1: " + srcLibFieldName + " field does not have any entries!");
 } // LoadIcon()
