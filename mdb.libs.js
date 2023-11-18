@@ -118,3 +118,9 @@ function LoadThumb(e, fields) {
  e.set("Sketch Phase", phase);
   
  }
+
+function LoadIcon(e, srcDB) {
+
+	e.set("Icon", srcDB[0].field("Icon"));
+
+} // LoadIcon()
