@@ -121,6 +121,9 @@ function LoadThumb(e, fields) {
 
 function LoadIcon(e, srcDB) {
 
-	e.set("Icon", srcDB[0].field("Icon"));
+ if (srcDB.length > 0)
+		e.set("Icon", e.field(srcDB)[0].field("Icon"));
+	else
+		message("LoadIcon ERROR: " + srcDB + " field does not have any entries!");
 
 } // LoadIcon()
