@@ -132,16 +132,25 @@ if (srcLibFields.length > 0)
 
 
 
-
-
-function LoadIconFromLib(e, srcLibFieldName, extFieldName) {
+function LoadIconFromLib2(e, destFieldName, srcLibFieldName, extFieldName) {
 
 var srcLibFields = e.field(srcLibFieldName); 
 
 
 
 if (srcLibFields.length > 0)
-                e.set("Icon", srcLibFields[0].field(extFieldName));
+                e.set(destFieldName, srcLibFields[0].field(extFieldName));
         else
                 message("💢 LoadIcon ERROR 1: " + srcLibFieldName + " field does not have any entries!");
 } // LoadIcon()
+
+
+
+
+function LoadIconFromLib(e, srcLibFieldName, extFieldName) {
+
+  LoadIconFromLib2(e, "Icon", srcLibFieldName, extFieldName)
+
+} // LoadIconFromLib()
+
+
