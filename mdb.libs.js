@@ -154,3 +154,19 @@ function LoadIconFromLib(e, srcLibFieldName, extFieldName) {
 } // LoadIconFromLib()
 
 
+function PlaySongByField(e, f) {
+
+var q = e.field(f);
+
+i = intent("android.media.action.MEDIA_PLAY_FROM_SEARCH");
+
+i.extra("query", q);
+
+message("Playing " + q);
+
+i.send();
+
+
+}
+
+
