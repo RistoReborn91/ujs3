@@ -18,6 +18,13 @@ function SetStatusByLinked(e, lib, f, status1, status2) {
     e.set(f, status2);
 }
 
+function SetStatusByLinked2(e, lib, f, condition, status1, status2) {
+
+  if (HasEntriesLinkedTo(e, lib) && condition == true)
+    e.set(f, status1);
+  else
+    e.set(f, status2);
+} // SetStatusByLinked2()
 
 
 
