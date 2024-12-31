@@ -6,7 +6,7 @@ function GetEntriesLinkedTo(e, lib) {
     if (xlib != null) {
         return xlib.linksTo(e);
     } else {
-        message("mdb.libs.js ERROR 1 ⚠ " + lib + " may be an incorrect library reference.");
+        message("GetEntriesLinkedTo() ERROR 1 ⚠ " + lib + " may be an incorrect library reference.");
 		return [];
     }
 } // GetEntriesLinkedTo()
