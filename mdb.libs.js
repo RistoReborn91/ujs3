@@ -1,6 +1,18 @@
 function GetEntriesLinkedTo(e, lib) {
-  return libByName(lib).linksTo(e);
-}
+  
+  var xlib = libByName(lib);
+
+    // If entries is not null, return its length; otherwise, return 0
+    if (xlib != null) {
+        return xlib.linksTo(e);
+    } else {
+        message("mdb.libs.js ERROR 1 ⚠ " + lib + " may be an incorrect library reference.");
+		return [];
+    }
+} // GetEntriesLinkedTo()
+
+
+
 
 function CountEntriesLinkedTo(e, lib) {
     
