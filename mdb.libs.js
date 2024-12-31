@@ -2,9 +2,17 @@ function GetEntriesLinkedTo(e, lib) {
   return libByName(lib).linksTo(e);
 }
 
-function CountEntriesLinkedTo(e,lib) {
-  return GetEntriesLinkedTo(e,lib).length;
-}
+function CountEntriesLinkedTo(e, lib) {
+    
+    var entries = GetEntriesLinkedTo(e, lib);
+
+    // If entries is not null, return its length; otherwise, return 0
+    if (entries != null) {
+        return entries.length;
+    } else {
+        return 0;
+    }
+} // CountEntriesLinkedTo()
 
 function HasEntriesLinkedTo(e, lib) {
   return CountEntriesLinkedTo(e,lib) > 0;
