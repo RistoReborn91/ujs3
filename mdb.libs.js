@@ -3,14 +3,8 @@ function GetEntriesLinkedTo(e, lib) {
 }
 
 function CountEntriesLinkedTo(e,lib) {
-  var result = 0;
-
-  if (HasEntriesLinkedTo(e, lib))
-	GetEntriesLinkedTo(e,lib).length;
-
-  return result;
-	
-} // CountEntriesLinkedTo()
+  return GetEntriesLinkedTo(e,lib).length;
+}
 
 function HasEntriesLinkedTo(e, lib) {
   return CountEntriesLinkedTo(e,lib) > 0;
