@@ -44,7 +44,7 @@ function PrintLinkedFields(e, resultField, lib, xf, linebreak) {
     result += linkedEntries[index].field(xf);
 	
 	// add delimiter only if this is not the last entry
-    if (index < linkedEntries.length - 1) {
+    if (index < linkedEntries.length - 1) 
       result += delim;
 	
   } // for
