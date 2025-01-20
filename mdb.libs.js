@@ -43,7 +43,7 @@ function PrintLinkedFields(e, dest, lib, xf) {
   // Set the Rates field with the constructed result string
   e.set("dest", result.trim());
 
-}
+} // PrintLinkedFields()
 
 
 
