@@ -30,6 +30,25 @@ function HasEntriesLinkedTo(e, lib) {
   return CountEntriesLinkedTo(e,lib) > 0;
 }
 
+
+function PrintLinkedFields(e, dest, lib, xf) {
+
+  let linkedEntries = GetEntriesLinkedTo(e, lib)
+  let result = "";
+  
+  for (let index in linkedEntries) {
+    result += linkedEntries[index].field(xf) + "\n";
+  }
+
+  // Set the Rates field with the constructed result string
+  e.set("dest", result.trim());
+
+}
+
+
+
+
+
 function SetStatusByLinked(e, lib, f, status1, status2) {
 
   if (HasEntriesLinkedTo(e, lib))
@@ -194,6 +213,6 @@ message("Playing " + q);
 i.send();
 
 
-}
+} // PlaySongByField()
 
 
