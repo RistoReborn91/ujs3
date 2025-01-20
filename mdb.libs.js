@@ -41,10 +41,14 @@ function PrintLinkedFields(e, resultField, lib, xf, linebreak) {
 	  delim = ", ";
   
   for (let index in linkedEntries) {
-    result += linkedEntries[index].field(xf) + delim;
-  }
+    result += linkedEntries[index].field(xf);
+	
+	// add delimiter only if this is not the last entry
+    if (index < linkedEntries.length - 1) {
+      result += delim;
+	
+  } // for
 
-  // Set the Rates field with the constructed result string
   e.set(resultField, result.trim());
 
 } // PrintLinkedFields() 
