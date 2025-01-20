@@ -31,13 +31,17 @@ function HasEntriesLinkedTo(e, lib) {
 }
 
 
-function PrintLinkedFields(e, resultField, lib, xf) {
+function PrintLinkedFields(e, resultField, lib, xf, linebreak) {
 
   let linkedEntries = GetEntriesLinkedTo(e, lib)
   let result = "";
+  let delim = "\n";
+  
+  if (!linebreak)
+	  delim = ", ";
   
   for (let index in linkedEntries) {
-    result += linkedEntries[index].field(xf) + "\n";
+    result += linkedEntries[index].field(xf) + delim;
   }
 
   // Set the Rates field with the constructed result string
