@@ -224,19 +224,26 @@ i.send();
 } // PlaySongByField()
 
 
-function InheritLibField(e, dest, dbtitle, src) {
+function InheritField(e, dest, libfield, src) {
 	
-	var xlib = e.field(dbtitle)[0];
+	var xlib = e.field(libfield)[0];
 	
 	if (xlib == null) {
-		message("mdb.libs.InheritLibFields() ERROR 1 ⚠️ Could not library \"" + dbtitle + "\"");
+		message("mdb.libs.InheritField() ERROR 1 ⚠️ Could not find entries in \"" + libfield + "\" field");
 		return();
 	}
 	
 	if (xlib.field(src) == null) {
-		message("InheritLibFields() ERROR 2 ⚠️ Could not find \"" + src + "\" in library called \"" + dbtitle + "\"");
+		message("mdb.libs.InheritField() ERROR 2 ⚠️ Could not find \"" + src + "\" field in library from the \"" + libfield + "\" field.");
 		return();
 	}
+	
+	if (e.field(dest) == null) {
+		message("mdb.libs.InheritField() ERROR 3 ⚠️ Could not find \"" + dest + "\" field.");
+		return();
+	}
+	
+	
 		e.set(dest, xlib.field(src));
 		
 	
