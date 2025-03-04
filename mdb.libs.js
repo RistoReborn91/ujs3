@@ -226,7 +226,9 @@ i.send();
 
 function InheritField(e, dest, libfield, src) {
 	
-	var xlib = e.field(libfield)[0];
+	var sourcefield = e.field(libfield);
+	var xlib = sourcefield[0];
+
 	
 	if (xlib == null) {
 		message("mdb.libs.InheritField() ERROR 1 ⚠️ Could not find entries in \"" + libfield + "\" field");
