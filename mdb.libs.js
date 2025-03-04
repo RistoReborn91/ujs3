@@ -224,3 +224,22 @@ i.send();
 } // PlaySongByField()
 
 
+function InheritLibField(e, dest, dbtitle, src) {
+	
+	var xlib = e.field(dbtitle)[0];
+	
+	if (xlib == null) {
+		message("mdb.libs.InheritLibFields() ERROR 1 ⚠️ Could not library \"" + dbtitle + "\"");
+		return();
+	}
+	
+	if (xlib.field(src) == null) {
+		message("InheritLibFields() ERROR 2 ⚠️ Could not find \"" + src + "\" in library called \"" + dbtitle + "\"");
+		return();
+	}
+		e.set(dest, xlib.field(src));
+		
+	
+} // InheritLibField()
+
+
