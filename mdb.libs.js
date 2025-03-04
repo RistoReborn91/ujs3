@@ -230,17 +230,17 @@ function InheritField(e, dest, libfield, src) {
 	
 	if (xlib == null) {
 		message("mdb.libs.InheritField() ERROR 1 ⚠️ Could not find entries in \"" + libfield + "\" field");
-		return();
+		return;
 	}
 	
 	if (xlib.field(src) == null) {
 		message("mdb.libs.InheritField() ERROR 2 ⚠️ Could not find \"" + src + "\" field in library from the \"" + libfield + "\" field.");
-		return();
+		return;
 	}
 	
 	if (e.field(dest) == null) {
 		message("mdb.libs.InheritField() ERROR 3 ⚠️ Could not find \"" + dest + "\" field.");
-		return();
+		return;
 	}
 	
 	
