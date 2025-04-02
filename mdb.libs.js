@@ -207,6 +207,10 @@ function LoadIconFromLib(e, srcLibFieldName, extFieldName) {
 
 } // LoadIconFromLib()
 
+function InheritIcon(e, f) {
+  LoadIconFromLib2(e, "Icon", f, "Icon");
+
+} // InheritIconkl
 
 function PlaySongByField(e, f) {
 
