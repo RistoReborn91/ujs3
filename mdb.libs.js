@@ -255,4 +255,7 @@ function InheritField(e, dest, libfield, src) {
 	
 } // InheritLibField()
 
+function SelfLink() {
+	entry().set("Self-Link", entry());
+}
 
