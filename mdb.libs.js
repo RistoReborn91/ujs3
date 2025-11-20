@@ -115,6 +115,7 @@ function OpenEntryInLib(q, d) {
 
   if (ent.length == 0) {
     message("❌️ OpenEntryInLib ERROR 2: Cannot find entry " + q + " in library named " + d);
+	lib2.show();
     return;
 
   }
